@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belize District Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
+    <header>
+        <h1>Belize District Game</h1>
+        <p class="creator">Created by Terryl Neal</p>
+    </header>
+    
+    <main class="game-container">
+        <div class="buttons-container">
+            <button onclick="changeImage('corozal')">Corozal</button>
+            <button onclick="changeImage('orangewalk')">Orange Walk</button>
+            <button onclick="changeImage('cayo')">Cayo</button>
+            <button onclick="changeImage('belizedist')">Belize</button>
+            <button onclick="changeImage('stanncreek')">Stann Creek</button>
+            <button onclick="changeImage('toledo')">Toledo</button>
+        </div>
+        
+        <div class="map-container">
+            <div class="map-background"></div>
+            <img id="myImage" src="assets/belize.png" alt="Belize Map" class="map-image">
+        </div>
+    </main>
 
-<h2>Belize District Game</h2>
-
-<p>Created by Terryl Neal</p>
-
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
-
-<img id="myImage" src="assets/belize.png" style="width:100px"><br>
-<button onclick="document.getElementById('myImage').src='assests/corozal.png">Corozal</button><br>
-<button onclick="document.getElementById('myImage').src='assests/orangewalk.png">Orange Walk</button><br>
-<button onclick="document.getElementById('myImage').src='assests/cayo.png">Cayo</button><br>
-<button onclick="document.getElementById('myImage').src='assests/belizedist.png">Belize</button><br>
-<button onclick="document.getElementById('myImage').src='assests/stanncreek.png">Stann Creek</button><br>
-<button onclick="document.getElementById('myImage').src='assests/toledo.png">Toledo</button><br>
-
+    <script>
+        function changeImage(district) {
+    const image = document.getElementById('myImage');
+    
+    image.style.opacity = '0';
+    
+    setTimeout(() => {
+        image.src = 'assets/' + district + '.svg';
+        
+        image.style.opacity = '1';
+        image.classList.add('fade-in');
+        
+        setTimeout(() => {
+            image.classList.remove('fade-in');
+        }, 300);
+    }, 150);
+}
+    </script>
 </body>
 </html>
