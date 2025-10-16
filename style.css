@@ -76,14 +76,12 @@ h1 {
 }
 
 .map-image {
-    width: 60%;
-    max-width: 350px;
+    width: 90%;
+    max-width: 400px;
     height: 550px;
     position: relative;
     z-index: 2;
-    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: all 0.1s ease;
 }
 button {
     background: rgba(30, 30, 30, 0.8);
@@ -94,7 +92,6 @@ button {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 }
@@ -115,8 +112,8 @@ button:active {
     }
     
     .map-image {
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        max-width: 450px;
     }
     
     .buttons-container {
@@ -135,8 +132,8 @@ button:active {
     }
     
     .map-image {
-        width: 95%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 450px;
     }
     
     .buttons-container {

@@ -34,16 +34,9 @@
     
     image.style.opacity = '0';
     
-    setTimeout(() => {
         image.src = 'assets/' + district + '.svg';
         
         image.style.opacity = '1';
-        image.classList.add('fade-in');
-        
-        setTimeout(() => {
-            image.classList.remove('fade-in');
-        }, 300);
-    }, 150);
 }
     </script>
 </body>
